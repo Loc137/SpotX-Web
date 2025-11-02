@@ -1,0 +1,129 @@
+* {
+    font-family: Montserrat;
+    background-color: #191414 !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    /* đảm bảo cao ít nhất bằng viewport */
+    background-image: url(../IMG/login_bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    font-size: 300%;
+    text-align: center;
+}
+
+input {
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 80%;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+#btn_login {
+    background-color: #1DB954 !important;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 85%;
+    margin: 20px 0 20px 30px;
+    font-size: larger;
+}
+
+.wrapper {
+    width: 500px;
+    border: none;
+    border-radius: 30px;
+    background: transparent !important;
+    backdrop-filter: blur(8px) !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    margin: 50px 50px 50px 50px;
+}
+
+.wrapper>h1,
+div,
+p {
+    background: transparent !important;
+}
+
+.wrapper p {
+    margin-left: 30px;
+}
+
+.wrapper a {
+    margin-left: 150px;
+    color: #1DB954 !important;
+}
+
+
+
+/* ==== RESPONSIVE LOGIN ==== */
+
+/* Dưới 768px: tablet dọc & điện thoại ngang */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+        margin: 30px;
+    }
+
+    input {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #btn_login {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .wrapper a {
+        display: block;
+        margin-left: 5%;
+        text-align: center;
+    }
+
+    #title {
+        font-size: 200%;
+    }
+}
+
+/* Dưới 480px: điện thoại nhỏ */
+@media (max-width: 480px) {
+    #title {
+        font-size: 180%;
+    }
+
+    input {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    #btn_login {
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .wrapper a {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modal Comment Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f2f2f2;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Comment section */
+    .comments-section {
+      margin-top: 20px;
+    }
+    .comment-item {
+      background: #f5f5f5;
+      padding: 8px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+    }
+    #commentForm {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    #commentForm input {
+      flex: 1;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    #commentForm button {
+      padding: 8px 12px;
+      border-radius: 6px;
+      background: #007bff;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Demo: Modal + Comment</h1>
+  <p>Click vào nút để mở modal chi tiết bài hát.</p>
+  <button id="openModalBtn">Show Song Info</button>
+
+  <!-- Modal -->
+  <div id="songModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="songTitle"></h2>
+      <p id="songArtist"></p>
+
+      <hr>
+
+      <div class="comments-section">
+        <h3>Comments</h3>
+        <div id="commentsList">Loading...</div>
+
+        <form id="commentForm">
+          <input type="text" id="commentInput" placeholder="Write a comment..." required />
+          <button type="submit">Post</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { db } from "./firebase-config.js";
+    import { collection, addDoc, getDocs, query, where } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
+
+    // Fake song để test
+    const song = {
+      id: "test-song-1",
+      name: "Demo Song",
+      artist: "Test Artist"
+    };
+
+    // Mở modal
+    document.querySelector("#openModalBtn").addEventListener("click", () => showModal(song));
+
+    // Đóng modal
+    document.querySelector(".close").addEventListener("click", () => {
+      document.querySelector("#songModal").style.display = "none";
+    });
+
+    // Hiển thị modal và comment
+    async function showModal(song) {
+      const modal = document.querySelector("#songModal");
+      modal.style
+    }

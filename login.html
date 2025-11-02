@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="icon" href="./IMG/SpotX_logo.png" />
+
+    <!-- Font & Bootstrap -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.2.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./style/login.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="login-form" class="box rounded-md">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="./IMG/SpotX_logo.png" id="logo" style="width: 60px; height: 60px;">
+                <p id="title" style="margin-top: 35px;">SpotX</p>
+            </div>
+
+            <h4 id="title">Log In</h4>
+
+            <!-- Email -->
+            <div data-mdb-input-init class="form-outline mb-4 form-group d-flex align-items-center rounded-sm">
+                <span class="icon"><i class="fa-light fa-envelope"></i></span>
+                <input type="email" id="email" class="form-control inp-email" placeholder="Email" required />
+                <label class="form-label" for="email">Email address</label>
+            </div>
+
+            <!-- Password -->
+            <div data-mdb-input-init class="form-outline mb-4 form-group d-flex align-items-center rounded-sm">
+                <span class="icon"><i class="fa-light fa-lock"></i></span>
+                <input type="password" id="password" class="form-control inp-pwd" placeholder="Password" required />
+                <label class="form-label" for="password">Password</label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="form-control btn btn-primary btn-block mb-4">Login</button>
+
+            <div class="text-center" style="margin: 30px 0;">
+                <p>Don't have an account? <a href="./register.html">Register</a></p>
+                <p>Or register with:</p>
+
+                <button type="button" class="btn btn-link btn-floating mx-1"
+                    style="background-color: #386bc0; padding: 22px;">
+                    <i class="fab fa-facebook-f fa-xl" style="color: white;"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1"
+                    style="background-color: #de5246; padding: 22px;">
+                    <i class="fab fa-google fa-xl" style="color: white;"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1"
+                    style="background-color: #55acee; padding: 22px;">
+                    <i class="fab fa-twitter fa-xl" style="color: white;"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1"
+                    style="background-color: #333; padding: 22px;">
+                    <i class="fab fa-github fa-xl" style="color: white;"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.13.1/firebase-auth-compat.min.js"
+        crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script type="module" src="./script/firebase-config.js"></script>
+    <script type="module" src="./script/login.js"></script>
+
+    <!-- Bootstrap + MDB -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.2.0/mdb.umd.min.js"></script>
+</body>
+
+</html>

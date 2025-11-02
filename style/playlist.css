@@ -1,0 +1,387 @@
+* {
+    font-family: Montserrat;
+    background-color: #191414 !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+.logo {
+    width: 50px;
+}
+
+#nav {
+    background-color: #191414 !important;
+}
+
+#avatar {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.name_user {
+    margin: 0 10px 0 10px;
+    font-size: larger;
+}
+
+#btn_setting {
+    margin: 0 10px 0 10px;
+}
+
+.asd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 500px;
+}
+
+.playlist_frame {
+    width: 60%;
+    height: 250px;
+    background: #00ae3d !important;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.img {
+    margin: 20px 20px 20px 20px;
+    width: 180px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.ct {
+    /* margin-bottom: 10px; */
+    display: grid;
+    grid-template-columns: 6fr 4fr 4.5fr 2.3fr 1.8fr;
+    grid-template-rows: 8fr;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.song_wrapper, .detail_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.song_row {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr 1fr;
+    grid-auto-rows: auto;
+    align-items: center;
+    gap: 40px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.iframe_embed {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.add{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.modal_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #191414 !important;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+.modal_box #backBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10000;
+}
+
+.modal_title{
+    font-size: xx-large;
+    font-weight: 700;
+    margin: 50px 50px 50px 150px;
+    display: inline-block;
+}
+
+.track_modal_wrapper, .artist_modal_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.track_modal_row , .artist_modal_row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.container_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container_word {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+
+/* ==== Ellipsis ==== */
+
+.ellipsis {
+    white-space: nowrap;
+    /* Không cho xuống dòng */
+    overflow: hidden;
+    /* Ẩn phần vượt quá */
+    text-overflow: ellipsis;
+    /* Thêm dấu ... */
+    max-width: 200px;
+    /* Chiều rộng tối đa (tuỳ chỉnh) */
+    display: inline-block;
+    /* Đảm bảo tính inline */
+}
+
+
+
+/* ==== Hover ==== */
+
+p:hover,
+a:hover,
+strong:hover,
+img:hover,
+h1:hover,
+i:hover {
+    transform-origin: center center;
+    display: inline-block;
+    will-change: transform;
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+
+
+/* ==== Responsive ==== */
+
+/* Màn hình dưới 992px (tablet, laptop nhỏ) */
+@media (max-width: 992px) {
+    .title {
+        margin: 30px 40px;
+        font-size: x-large;
+    }
+
+    .ps_row img,
+    .nr_row img,
+    .fa_row img {
+        width: 140px;
+        height: 140px;
+    }
+
+    #avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    #btn_setting {
+        font-size: 20px;
+    }
+}
+
+/* Màn hình dưới 768px (tablet dọc, điện thoại ngang) */
+@media (max-width: 768px) {
+    .title {
+        text-align: center;
+        margin: 20px;
+        font-size: large;
+    }
+
+    .ps_row img,
+    .nr_row img,
+    .fa_row img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .carousel-item img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .container_word p {
+        font-size: 14px;
+    }
+
+    .footer_icon i {
+        font-size: 18px;
+    }
+}
+
+/* Màn hình dưới 480px (điện thoại nhỏ) */
+@media (max-width: 480px) {
+
+    .ps_row img,
+    .nr_row img,
+    .fa_row img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ellipsis {
+        max-width: 140px;
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: medium;
+    }
+
+    .footer_icon i {
+        font-size: 16px;
+    }
+
+    .container_word {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+/* === POPUP CHỌN PLAYLIST === */
+.playlist-popup {
+  background: #181818;
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  padding: 25px 30px;
+  width: 360px;
+  text-align: center;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.playlist-popup h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1db954;
+  letter-spacing: 0.5px;
+}
+
+.playlist-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.playlist-btn {
+  background: #282828;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s;
+  font-size: 14px;
+}
+.playlist-btn:hover {
+  background: #1db954;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.playlist-create {
+  margin-bottom: 15px;
+}
+.playlist-create input {
+  width: 80%;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #121212;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+.playlist-create input:focus {
+  outline: none;
+  border-color: #1db954;
+}
+
+.btn-create,
+.btn-close {
+  background: #1db954;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.btn-create:hover,
+.btn-close:hover {
+  background: #1ed760;
+  transform: scale(1.05);
+}
+.btn-close {
+  margin-top: 8px;
+  background: #333;
+  color: #fff;
+}
+.btn-close:hover {
+  background: #444;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

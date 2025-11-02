@@ -1,0 +1,221 @@
+* {
+    font-family: Montserrat;
+    background-color: #191414 !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.change_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn{
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 80%;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+.logo {
+    width: 50px;
+}
+
+#nav {
+    background-color: #191414 !important;
+}
+
+#avatar {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.name_user {
+    margin: 0 10px 0 10px;
+    font-size: larger;
+}
+
+.add {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#btn_setting {
+    margin: 0 10px 0 10px;
+}
+
+.title {
+    font-size: xx-large;
+    font-weight: 700;
+    margin: 50px 50px 50px 200px;
+}
+
+
+
+.container_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container_word {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+
+
+/* ==== Ellipsis ==== */
+
+.ellipsis {
+    white-space: nowrap;
+    /* Không cho xuống dòng */
+    overflow: hidden;
+    /* Ẩn phần vượt quá */
+    text-overflow: ellipsis;
+    /* Thêm dấu ... */
+    max-width: 200px;
+    /* Chiều rộng tối đa (tuỳ chỉnh) */
+    display: inline-block;
+    /* Đảm bảo tính inline */
+}
+
+
+
+/* ==== Hover ==== */
+
+p:hover,
+a:hover,
+strong:hover,
+img:hover,
+h1:hover,
+i:hover {
+    transform-origin: center center;
+    display: inline-block;
+    will-change: transform;
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+
+
+/* ==== Responsive ==== */
+
+/* Màn hình dưới 992px (tablet, laptop nhỏ) */
+@media (max-width: 992px) {
+    .title {
+        margin: 30px 40px;
+        font-size: x-large;
+    }
+
+    .ps_row img,
+    .nr_row img,
+    .fa_row img {
+        width: 140px;
+        height: 140px;
+    }
+
+    #avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    #btn_setting {
+        font-size: 20px;
+    }
+}
+
+/* Màn hình dưới 768px (tablet dọc, điện thoại ngang) */
+@media (max-width: 768px) {
+    .title {
+        text-align: center;
+        margin: 20px;
+        font-size: large;
+    }
+
+    .ps_row img,
+    .nr_row img,
+    .fa_row img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .carousel-item img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .container_word p {
+        font-size: 14px;
+    }
+
+    .footer_icon i {
+        font-size: 18px;
+    }
+}
+
+/* Màn hình dưới 480px (điện thoại nhỏ) */
+@media (max-width: 480px) {
+
+    .ps_row img,
+    .nr_row img,
+    .fa_row img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ellipsis {
+        max-width: 140px;
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: medium;
+    }
+
+    .footer_icon i {
+        font-size: 16px;
+    }
+
+    .container_word {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
