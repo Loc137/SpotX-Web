@@ -11,7 +11,7 @@ const handleLogin = function (event) {
     let email = inpEmail.value.trim()
     let password = inpPwd.value.trim();
     if (!email || !password) {
-        alert("Vui lòng điền đầy đủ các trường dữ liệu");
+        alert("Please fill all the fields!");
         return;
     }
 
@@ -29,7 +29,7 @@ const handleLogin = function (event) {
             localStorage.setItem('user_session', JSON.stringify(userSession));
             localStorage.setItem("currentUser", JSON.stringify({email: user.email}));
 
-            alert("Đăng nhập thành công!");
+            alert("Log in successfully!");
 
             window.location.href = './home.html';
         })

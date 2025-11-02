@@ -22,11 +22,11 @@ async function handleRegister(event) {
 
   // Kiểm tra input
   if (!username || !email || !password || !confirmPassword) {
-    alert("Vui lòng điền đủ các trường");
+    alert("Please fill all the fields!");
     return;
   }
   if (password !== confirmPassword) {
-    alert("Mật khẩu không khớp");
+    alert("Passwords do not match!");
     return;
   }
 
@@ -46,7 +46,7 @@ async function handleRegister(event) {
 
     // Lưu vào Firestore, document id = uid
     await setDoc(doc(db, "users", user.uid), userData);
-    alert("Đăng ký thành công!");
+    alert("Register successfully!!");
     registerForm.reset();
   } catch (error) {
     console.error("Error: ", error.message);
