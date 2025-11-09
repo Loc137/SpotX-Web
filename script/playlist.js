@@ -10,6 +10,29 @@ window.loadPlaylists = loadPlaylists;
 window.showPlaylistTracks = showPlaylistTracks;
 window.deleteTrackInPlaylist = deleteTrackInPlaylist; // ✅ cho phép gọi từ HTML
 
+//show username
+
+document.addEventListener("DOMContentLoaded", () => {
+  const userSession = JSON.parse(localStorage.getItem("user_session"));
+  const avatarImg = document.getElementById("avatar");
+  const nameDiv = document.querySelector(".name_user");
+
+  if (userSession && userSession.user) {
+    const user = userSession.user;
+
+    // Hiển thị tên
+    nameDiv.textContent = user.displayName || user.email || "User";
+
+    // Hiển thị ảnh đại diện (chỉ có nếu đăng nhập Google)
+    avatarImg.src = user.photoURL;
+
+  } else {
+    // Nếu chưa đăng nhập → chuyển về login
+    window.location.href = "./login.html";
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", async () => {
   await loadPlaylists();
 });
